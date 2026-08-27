@@ -509,7 +509,6 @@ section { padding: 88px 0; }
   font-size: 13px;
 }
 
-/* ---------- About page bits ---------- */
 .about-grid {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
