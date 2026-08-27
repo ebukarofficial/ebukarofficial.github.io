@@ -480,6 +480,40 @@ section { padding: 88px 0; }
 }
 @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; } }
 
+/* ---------- Contact row (horizontal, clickable pills) ---------- */
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 26px;
+}
+.contact-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px 12px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  transition: border-color .15s ease, transform .15s ease;
+}
+.contact-pill:hover { border-color: var(--orange-bright); transform: translateY(-2px); }
+.contact-pill .ic {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: var(--grad-brand);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800;
+  font-size: 13px;
+  flex-shrink: 0;
+  color: var(--white);
+}
+.contact-pill span.label {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--white);
+}
+@media (max-width: 600px) { .contact-row { gap: 10px; } .contact-pill { padding: 10px 16px 10px 10px; } }
+
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.in { opacity: 1; transform: none; }
 
