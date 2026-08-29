@@ -98,6 +98,8 @@ p { margin: 0; color: var(--light-gray); }
 .btn-primary:hover { opacity: .92; }
 .btn-outline { border-color: var(--border); color: var(--white); background: transparent; }
 .btn-outline:hover { border-color: var(--orange-bright); }
+.btn-outline-dark { border-color: rgba(0,0,0,0.22); color: var(--black); background: transparent; }
+.btn-outline-dark:hover { border-color: var(--orange); color: var(--orange-deep); }
 .btn-dark { background: var(--white); color: var(--black); }
 
 /* ---------- Header / Nav ---------- */
@@ -516,7 +518,7 @@ section { padding: 88px 0; }
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr 1.1fr;
+  grid-template-columns: 1.4fr 1fr;
   gap: 36px;
 }
 .footer-col h4 {
