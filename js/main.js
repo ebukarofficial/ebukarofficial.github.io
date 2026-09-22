@@ -121,46 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'ArrowRight') showAt(currentIndex + 1);
     });
   }
-
-  // Hero role-cycling typewriter effect
-  const typedEl = document.querySelector('.hero-typed .typed-text');
-  if (typedEl) {
-    const roles = ['Graphic Designer', 'Product Designer', 'UI/UX Designer', 'Brand Strategist'];
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    if (reducedMotion) {
-      typedEl.textContent = roles[0];
-    } else {
-      let roleIndex = 0;
-      let charIndex = 0;
-      let deleting = false;
-
-      function tick() {
-        const current = roles[roleIndex];
-        if (!deleting) {
-          charIndex++;
-          typedEl.textContent = current.slice(0, charIndex);
-          if (charIndex === current.length) {
-            deleting = true;
-            setTimeout(tick, 1800);
-            return;
-          }
-          setTimeout(tick, 85);
-        } else {
-          charIndex--;
-          typedEl.textContent = current.slice(0, charIndex);
-          if (charIndex === 0) {
-            deleting = false;
-            roleIndex = (roleIndex + 1) % roles.length;
-            setTimeout(tick, 400);
-            return;
-          }
-          setTimeout(tick, 45);
-        }
-      }
-      tick();
-    }
-  }
 });
 
 // Typing effect: cycles through role labels in the hero
